@@ -34,8 +34,8 @@ This repository contains:
 
 ## 📈Results
 
+✔️ A Neural Network model with 100% accuracy on the testing data
 
-- 
 
 
 ## 🎯 Learning Objectives
