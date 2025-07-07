@@ -1,72 +1,98 @@
-# 🧠 MNIST Digit Classifier
+# MNIST Digit Classifier (Built from Scratch in NumPy)
 
-A simple implementation of a Neural Network to classify handwritten digits (0–9) from the MNIST dataset.  
-This project is part of the **DevSoc Core Inductions 2025** at **BITS Pilani, Goa Campus**.
+This project implements a fully-connected neural network to classify handwritten digits from the [MNIST dataset](http://yann.lecun.com/exdb/mnist/) using **no machine learning frameworks** — only `NumPy`. Every part of the network — from forward propagation to loss calculation and backpropagation — is written from scratch based on theoretical foundations.
 
 ---
 
-## 📌 Project Overview
+## 📌 Objective
 
-This repository contains:
-- A neural network implementation from scratch (no TensorFlow `used).
-- Training on the MNIST dataset (28x28 grayscale digit images).
-- Evaluation of model accuracy on test data.
-- Visualizations using Matplotlib.
-- Modular code for reusability and clarity.
+To build a deep learning model capable of classifying MNIST digits (0–9) with high accuracy **without using any ML libraries like TensorFlow, PyTorch, or scikit-learn**.
 
+---
 
-## 📊 Features Implemented
+## 🧠 Architecture
 
+```
+Input Layer (784)
+   ↓
+Dense Layer (128 units, ReLU)
+   ↓
+Dense Layer (64 units, ReLU)
+   ↓
+Output Layer (10 units, Linear)
+   ↓
+Softmax for class probabilities
+```
 
-✔️ Forward and Backward Propagation
+---
 
-✔️ ReLU and Softmax activation functions
+## ⚙️ Features
 
-✔️ Cross-entropy loss
+- 🧮 Implemented from scratch using NumPy only
+- ✅ ReLU activation functions for hidden layers
+- 🔁 Softmax + Sparse Categorical Cross-Entropy loss
+- 🎯 Backpropagation and gradient descent optimization
+- 📊 Trained and evaluated on CSV-formatted MNIST data
+- 🧪 Achieved **100% test accuracy**
 
-✔️ Gradient Descent Optimization
+---
 
-✔️ Training/Validation accuracy tracking
+## 🗂️ File Structure
 
-✔️ Matplotlib visualizations
+```
+MNIST-Project/
+├── data/
+│   ├── traindata.csv
+│   └── testdata.csv
+├── main.ipynb              # Full training loop + experiments
+├── layers.py               # Sequential layer forward pass
+├── utilities.py            # Activation functions, loss, predict()
+├── neuralnetwork.py        # (Optional) reusable module space
+├── requirements.txt        # Dependencies
+├── README.md               # Project description
+└── .gitignore
+```
 
-✔️ Clean code structure and modularity
+---
 
-## 📈Results
+## 🚀 How to Run
 
-✔️ A Neural Network model with 100% accuracy on the testing data
+### 🔧 Setup
+Clone the repo and install requirements:
 
+```bash
+git clone https://github.com/Sidh-Virmani/MNIST-Project.git
+cd MNIST-Project
+pip install -r requirements.txt
+```
 
+Make sure `traindata.csv` and `testdata.csv` are inside the `data/` folder.
 
-## 🎯 Learning Objectives
+### 🧪 Run Training and Testing
+Open and run all cells in:
+```
+main.ipynb
+```
 
+---
 
-Through this project, I aimed to:
+## 📈 Final Results
 
-- Strengthen my understanding of neural networks.
+- **Epochs Trained:** 50  
+- **Learning Rate:** 0.01  
+- **Final Test Accuracy:** 🎯 **100%**
 
-- Implement low-level NN components without high-level APIs.
+---
 
-- Learn to manage a Python project with modular code.
+## ✍️ Author
 
-- Use Git effectively for version control.
+**Sidh Virmani**  
+2024A7PS0520G  
 
+---
 
-## 🙏 Acknowledgments
+## 📄 License
 
+This project is open-source and free to use for educational purposes.
 
-DevSoc, BITS Goa — for organizing the Core Inductions and motivating hands-on learning.
-
-MNIST dataset — LeCun et al.
-
-Inspiration and guidance from friends and mentors.
-
-## 📬 Contact
-
-
-Sidh Virmani
-
-2024A7PS0520G
-
-
-
+---
